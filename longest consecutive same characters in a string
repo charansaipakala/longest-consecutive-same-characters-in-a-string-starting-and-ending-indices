@@ -1,0 +1,29 @@
+s=input("enter the string=")#Example input abxxxcc
+a=set(s)
+maxfrq=0
+maxterm=None
+start=None
+end=None
+l=[]
+for j in a:
+    frq=s.count(j)
+    if(frq>maxfrq):
+        maxfrq=frq
+        maxterm=j
+el=maxterm
+for i in range(0,len(s)):
+    if(s[i]==maxterm):
+       if(start==None):
+           start=i
+       end=i
+if(start!=end):
+    l.append(start)
+    l.append(end)
+    print(l)
+elif(start==end):
+    print(l)
+#output [2,4]
+
+    
+
+
